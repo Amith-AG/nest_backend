@@ -1,8 +1,9 @@
 import { Injectable } from '@nestjs/common';
+import { complete } from './lib/deepseek';
 
 @Injectable()
 export class AppService {
-  getHello(): string {
-    return 'Hello World!';
+  async getHello(): Promise<string> {
+    return await complete() 
   }
 }
